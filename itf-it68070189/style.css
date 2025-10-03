@@ -1,0 +1,12 @@
+nav{
+    display: flex;
+    padding: 1em;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #A3B18A;
+}
+
+body{
+    margin: 0;
+    background-color: #faf3e0;
+}
