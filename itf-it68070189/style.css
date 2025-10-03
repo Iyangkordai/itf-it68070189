@@ -10,3 +10,27 @@ body{
     margin: 0;
     background-color: #faf3e0;
 }
+
+#hero{
+    display: flex;
+    padding: 1em;
+    gap: 20px;
+    align-items: center;
+}
+
+#icon_medium{
+    width: 100px;
+    height: 100px;
+}
+
+#bank_log{
+    background-color: #d4a373;
+    height: 250px;
+    margin: 1em;
+    padding: 1em;
+    border-radius: 20px;
+}
+
+#info{
+    display: flex;
+}
