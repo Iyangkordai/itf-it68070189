@@ -8,91 +8,108 @@
 </head>
 <body>
     <nav>
-        <p>68070189</p>
-        <h2>ITF Website</h2>
-        <p>Week 14</p>
+        <div class="nav">
+            <p>68070189</p>
+            <h2>ITF Website</h2>
+            <p>Week 14</p>
+        </div>
     </nav>
-    <div id="hero">
-        <div id="logo_para">
-            <img src="icon_material/Icons8/pig.png" alt="bank" id="icon_medium">
-            <div>
+    <div  id="hero">
+        <div  id="hero">
+            <div class="logo">
+                <img src="icon_material/Icons8/pig.png" alt="bank" class="icon_medium">
+            </div>
+            <div  id="hero">
                 <h2>ITF Simple Bank</h2>
                 <p>Welcome to my first HTML + CSS + JS Website!</p>
             </div>
         </div>
-        <div id="bank_log">
-            <h2>This is Bank's log</h2>
+        <div class="user_log">
+            <div id="user_para">
+                <div class="logo_small">
+                    <img src="icon_material/Icons8/user.png" alt="user_icon" class="icon_small">
+                </div>
+                <h3>Sukphichaya Khanereo</h3>
+                <h3>Type: Savings account</h3>
+            </div>
+            <div id="log_div">
+                <div id="log"></div>
+            </div>
         </div>
     </div>
     <div id="menu">
-        <div class="menu_div">
-            <h2>Account Overview</h2>
-            <div class="logo_para">
-                <div class="logo">
-                    <img src="icon_material/Icons8/user.png" alt="">
-                </div>
-                <div>
-                    <h3>Account Information</h3>
-                    <h4>Name: Sukphichaya Khanereo</h4>
-                    <h4>Type: Savings Account</h4>
-                </div>
+        <h1>Account Overview</h1>
+        <div class="logo_para">
+            <div class="logo">
+                <img src="icon_material/Icons8/briefcase.png" alt="briefcase_icon" class="icon_medium">
             </div>
-            <div class="logo_para">
-                <div class="logo">
-                    <img src="icon_material/Icons8/briefcase.png" alt="">
-                </div>
-                <div>
-                    <h3>Balance Information</h3>
-                    <div>
-                        <h4>Current account balance: </h4>
-                        <input type="number" id="current_acc">
+            <div class="paragrap">
+                <h3>Balance Information</h3>
+                <div class="input_para">
+                    <h3>Current account balance : </h3>
+                    <div class="input_div">
+                        <input type="number" id="current_acc" value="0">
                     </div>
-                    <div>
-                        <h4>Current cash balance</h4>
-                        <input type="number" id="current_cash">
-                    </div>
-                    <button onclick="change()">Change</button>
                 </div>
+                <div class="input_para">
+                    <h3>Current cash balance : </h3>
+                    <div class="input_div">
+                        <input type="number" id="current_cash" value="0">
+                    </div>
+                </div>
+                <button onclick="change()">Change</button>
             </div>
-            <div class="logo_para">
-                <div class="logo">
-                    <img src="icon_material/Icons8/atm.png" alt="">
-                </div>
-                <div>
-                    <h3>Bank Operation</h3>
-                    <div>
-                        <select name="opt" id="bank_opt">
-                            <option value="Deposit">Deposit</option>
-                            <option value="Withdraw">Withdraw</option>
-                        </select>
-                        <input type="number">
+        </div>
+        <div class="logo_para">
+            <div class="logo">
+                <img src="icon_material/Icons8/atm.png" alt="atm_icon" class="icon_medium">
+            </div>
+            <div class="paragrap">
+                <h3>Bank Operation</h3>
+                <div class="input_para">
+                    <div class="dropdown_input">
+                        <div class="input_div">
+                            <input type="number" id="money" value="0">
+                        </div>
+                        <div class="dropdown">
+                            <select name="opt" id="bank_opt">
+                                <option value="Deposit">Deposit</option>
+                                <option value="Withdraw">Withdraw</option>
+                            </select>
+                        </div>
                     </div>
-                    <button onclick="">Proceed</button>
                 </div>
+                <button onclick="proceed()">Proceed</button>
+            </div>
+        </div>
             </div>
         </div>
         <div class="menu_div">
-            <h2>Finacial Tool</h2>
-            <div class="logo_para">
+            <h1>Finacial Tool</h1>
+            <div class="logo_para" id="Finacial">
                 <div class="logo">
-                    <img src="icon_material/Icons8/exchange.png" alt="exchange_money">
+                    <img src="icon_material/Icons8/exchange.png" alt="exchange_money" class="icon_medium">
                 </div>
-                <div>
-                    <h3>Currency Converter</h3>
-                    <div>
-                        <h3>Input Balance</h3>
-                        <input type="number">
-                    </div>
-                    <div>
-                        <h3>Output balance</h3>
-                        <input type="text">
-                    </div>
-                    <div>
-                        <h4>Input currency</h4>
-                        <select name="currency" id="currency_dropdown">
+                <div class="paragrap">
+                    <h3>Input balance</h3>
+                    <div class="dropdown_input">
+                        <div class="input_div">
+                            <input type="number" id="currency_value" value="0">
+                        </div>
+                        <div class="dropdown">
+                            <select name="currency" id="currency_dropdown">
                             <option value="USD">USD</option>
                             <option value="THB">THB</option>
-                        </select>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="input_para">
+                        <h3>Output balance</h3>
+                        <div class="input_div">
+                            <input type="number" disabled>
+                        </div>
+                    </div>
+                    <div>
                         <button>Convert</button>
                     </div>
                 </div>
