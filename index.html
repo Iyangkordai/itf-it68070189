@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <!-- Nav Bar -->
     <nav>
         <div class="nav">
             <p>68070189</p>
@@ -14,17 +15,18 @@
             <p>Week 14</p>
         </div>
     </nav>
-    <div  id="hero">
-        <div  id="hero">
+    <!-- Hero Section -->
+    <div  class="hero">
+        <div class="hero_div">
             <div class="logo">
                 <img src="icon_material/Icons8/pig.png" alt="bank" class="icon_medium">
             </div>
-            <div  id="hero">
+            <div class="hero">
                 <h2>ITF Simple Bank</h2>
                 <p>Welcome to my first HTML + CSS + JS Website!</p>
             </div>
         </div>
-        <div class="user_log">
+        <div id="log_div">
             <div id="user_para">
                 <div class="logo_small">
                     <img src="icon_material/Icons8/user.png" alt="user_icon" class="icon_small">
@@ -32,59 +34,63 @@
                 <h3>Sukphichaya Khanereo</h3>
                 <h3>Type: Savings account</h3>
             </div>
-            <div id="log_div">
-                <div id="log"></div>
-            </div>
+            <div id="log"></div>
         </div>
     </div>
+    <!-- Menu Section -->
     <div id="menu">
-        <h1>Account Overview</h1>
-        <div class="logo_para">
-            <div class="logo">
-                <img src="icon_material/Icons8/briefcase.png" alt="briefcase_icon" class="icon_medium">
-            </div>
-            <div class="paragrap">
-                <h3>Balance Information</h3>
-                <div class="input_para">
-                    <h3>Current account balance : </h3>
-                    <div class="input_div">
-                        <input type="number" id="current_acc" value="0">
-                    </div>
+        <!-- Account Overview -->
+        <div id="Account_overview">
+            <h1>Account Overview</h1>
+            <!-- Balance_info -->
+            <div class="logo_para" id="balance_info">
+                <div class="logo">
+                    <img src="icon_material/Icons8/briefcase.png" alt="briefcase_icon" class="icon_medium">
                 </div>
-                <div class="input_para">
-                    <h3>Current cash balance : </h3>
-                    <div class="input_div">
-                        <input type="number" id="current_cash" value="0">
-                    </div>
-                </div>
-                <button onclick="change()">Change</button>
-            </div>
-        </div>
-        <div class="logo_para">
-            <div class="logo">
-                <img src="icon_material/Icons8/atm.png" alt="atm_icon" class="icon_medium">
-            </div>
-            <div class="paragrap">
-                <h3>Bank Operation</h3>
-                <div class="input_para">
-                    <div class="dropdown_input">
+                <div class="paragrap">
+                    <h3>Balance Information</h3>
+                    <div class="input_para">
+                        <h3>Current account balance : </h3>
                         <div class="input_div">
-                            <input type="number" id="money" value="0">
-                        </div>
-                        <div class="dropdown">
-                            <select name="opt" id="bank_opt">
-                                <option value="Deposit">Deposit</option>
-                                <option value="Withdraw">Withdraw</option>
-                            </select>
+                            <input type="number" id="current_acc" value="0">
                         </div>
                     </div>
+                    <div class="input_para">
+                        <h3>Current cash balance : </h3>
+                        <div class="input_div">
+                            <input type="number" id="current_cash" value="0">
+                        </div>
+                    </div>
+                    <button onclick="change()">Change</button>
                 </div>
-                <button onclick="proceed()">Proceed</button>
+            </div>
+            <!-- Bank Operation -->
+            <div class="logo_para">
+                <div class="logo">
+                    <img src="icon_material/Icons8/atm.png" alt="atm_icon" class="icon_medium">
+                </div>
+                <div class="paragrap">
+                    <h3>Bank Operation</h3>
+                    <div class="input_para">
+                        <div class="dropdown_input">
+                            <div class="input_div">
+                                <input type="number" id="money" value="0">
+                            </div>
+                            <div class="dropdown">
+                                <select name="opt" id="bank_opt">
+                                    <option value="Deposit">Deposit</option>
+                                    <option value="Withdraw">Withdraw</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <button onclick="proceed()">Proceed</button>
+                </div>
             </div>
         </div>
-            </div>
-        </div>
-        <div class="menu_div">
+        <!-- End Account Overview -->
+        <!-- Start Finacial Tool -->
+        <div id="Account_overview">
             <h1>Finacial Tool</h1>
             <div class="logo_para" id="Finacial">
                 <div class="logo">
@@ -113,9 +119,11 @@
                         <button>Convert</button>
                     </div>
                 </div>
-            </div> 
+            </div>
         </div>
+        <!-- End Finacial tool -->
     </div>
+    <!-- End Body -->
     <script src="script.js"></script>
 </body>
 </html>

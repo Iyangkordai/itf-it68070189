@@ -11,15 +11,6 @@ nav{
     position: relative;
 }
 
-.user_log{
-    width: 80%;
-    display: flex;
-    flex-direction: column;
-    padding: 1em;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-}
 
 #log_div{
     width: 100%;
@@ -48,8 +39,6 @@ nav{
     align-items: center;
     padding: 10px 20px;
     justify-content: space-between;
-    position: absolute;
-    width: 100%;
     top: 0;
 }
 
@@ -85,8 +74,8 @@ body{
     align-items: center;
     margin: 0;
     background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
-    padding: 20px;
     justify-content: center;
+    padding: 20px;
 }
 
 p, h2, h3, h1{
@@ -94,13 +83,24 @@ p, h2, h3, h1{
     margin: 0px;
 }
 
-#hero{
+#Account_overview{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.hero{
     display: flex;
     padding: 1em;
     gap: 20px;
     flex-direction: column;
     width: 100%;
     align-items: center;
+    justify-content: center;
+}
+
+.hero_div{
+    display: flex;
 }
 
 .icon_medium{
@@ -109,6 +109,19 @@ p, h2, h3, h1{
 }
 
 #log{
+    border-radius: 20px;
+    background: transparent;
+    border-radius: 20px;
+    backdrop-filter: blur(10px);
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    margin: 20px 0px;
+    padding: 20px;
+    height: 250px;
+    flex-wrap: wrap;
+}
+#log_div{
     height: 250px;
     border-radius: 20px;
     background: rgba(255, 255, 255, 0.164);
@@ -117,17 +130,17 @@ p, h2, h3, h1{
     border: 1px solid rgba(255, 255, 255, 0.13);
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.584);
     color: #ffffff;
-    padding: 1em;
     display: flex;
+    width: 80%;
     flex-direction: column;
+    height: fit-content;
+    overflow: auto;
 }
-
 #menu{
     width: 100%;
     display: flex;
     padding: 1em;
-    flex-direction: column;
-    align-items: center;
+    justify-content: space-around;
 }
 .logo_para{
     display: flex;
