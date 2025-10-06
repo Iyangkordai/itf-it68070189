@@ -5,6 +5,7 @@ const action = document.getElementById("bank_opt")
 let current_acc = document.getElementById("current_acc")
 let current_cash = document.getElementById("current_cash")
 let cnt = current_log.childElementCount
+let alert_state = document.getElementById("alert_box")
 
 
 function change(){
@@ -16,13 +17,29 @@ function change(){
 
 function proceed(){
     if (action == "Deposit"){
-        current_acc.value = Number(current_acc.value) + Number(money_wd.value)
-        current_cash.value = Number(current_cash.value) - Number(money_wd.value)
+        if (Number(current_cash) >= Number(money_wd.value)){
+            current_acc.value = Number(current_acc.value) + Number(money_wd.value)
+            current_cash.value = Number(current_cash.value) - Number(money_wd.value)
+            change()
+            money_wd.value = 0
+        }
+        else{
+            alert_state.style.visibility = "visible"
+        }
     }
     else{
-        current_acc.value = Number(current_acc.value) - Number(money_wd.value)
-        current_cash.value = Number(current_cash.value) + Number(money_wd.value)
+        if (Number(current_acc.value) >= Number(money_wd.value)){
+            current_acc.value = Number(current_acc.value) - Number(money_wd.value)
+            current_cash.value = Number(current_cash.value) + Number(money_wd.value)
+            change()
+            money_wd.value = 0
+        }
+        else{
+            alert_state.style.visibility = "visible"
+        }
     }
-    change()
-    money_wd.value = 0
+}
+
+function close_alert(){
+    alert_state.style.visibility = "hidden"
 }
