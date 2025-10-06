@@ -1,6 +1,6 @@
 const num = document.getElementById("num")
 const current_log = document.getElementById("log")
-const money_wd = document.getElementById("money")
+let money_wd = document.getElementById("money")
 const action = document.getElementById("bank_opt")
 let current_acc = document.getElementById("current_acc")
 let current_cash = document.getElementById("current_cash")
@@ -25,6 +25,7 @@ function proceed(){
         }
         else{
             alert_state.style.visibility = "visible"
+            money_wd.value = 0
         }
     }
     else{
@@ -36,6 +37,7 @@ function proceed(){
         }
         else{
             alert_state.style.visibility = "visible"
+            money_wd.value = 0
         }
     }
 }
